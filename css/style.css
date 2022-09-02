@@ -1,0 +1,77 @@
+.btn-azul{
+    background-color: #395DEB;
+    color: white;
+}
+.btn-azul:hover{
+    background-color: #224bec;
+    border-color: #224bec;
+    color: white;
+}
+.btn-azul:focus{
+    background-color: #224bec;
+    border-color: #224bec;
+    color: white;
+    box-shadow: 0px 0px 0px 4px #7691ff;
+}
+.btn-gris{
+    background-color: #AEAEAE;
+    color:white;
+}
+.btn-gris:hover{
+    background-color: #7b7b7b;
+    border-color: #7b7b7b;
+    color: white;
+}
+.btn-gris:focus{
+    background-color: #7b7b7b;
+    border-color: #7b7b7b;
+    color: white;
+    box-shadow: 0px 0px 0px 4px #afafaf;
+}
+.btn-rosa{
+    background-color: #FF587C;
+    color: #292929;
+    color: white;
+}
+.btn-rosa:hover{
+    background-color: #ff2f5c;
+    border-color: #ff2f5c;
+    color: white;
+}
+.btn-rosa:focus{
+    background-color: #ff2f5c;
+    border-color: #ff2f5c;
+    color: white;
+    box-shadow: 0px 0px 0px 4px #fe91a8;
+
+}
+.btn-violeta{
+    background-color: #7556E3;
+    color:white;
+}
+.btn-violeta:hover{
+    background-color: #573fb0;
+    border-color: #573fb0;
+    color: white;
+}
+.btn-violeta:focus{
+    background-color: #573fb0;
+    border-color: #573fb0;
+    color: white;
+    box-shadow: 0px 0px 0px 4px #8a6df5;
+}
+.btn-celeste{
+    background-color: #788FEB;
+    color:white;
+}
+.btn-celeste:hover{
+    background-color: #5270e7;
+    border-color: #5270e7;
+    color: white;
+}
+.btn-celeste:focus{
+    background-color: #5270e7;
+    border-color: #5270e7;
+    color: white;
+    box-shadow: 0px 0px 0px 4px #aab9f5;
+}
