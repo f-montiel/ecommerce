@@ -15,24 +15,83 @@
 </head>
 <body>
     <header>
-
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"> <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_qDJZag.json" background="transparent" speed="1" style="width: 80px; height: 80px;" loop autoplay></lottie-player></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" >
+                  <li class="nav-item">
+                    <a class="nav-link active fs-4 fw-bolder" aria-current="page" href="/index.html" >PuntoCel</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle fs-4 mx-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Marcas
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Samsung</a></li>
+                      <li><a class="dropdown-item" href="#">Motorola</a></li>
+                      <li><a class="dropdown-item" href="#">TCL</a></li>
+                      <li><a class="dropdown-item" href="#">Iphone</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button type="button" class="btn fs-4" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</button>
+                  </li>
+                    <li><i class="bi bi-person-circle fs-4"></i></li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="buscar">
+                  <button class="btn colorBtnBuscar fs-4" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
     </header>
     <main>
+  <!-- Modal -->
+  <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLogin" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitulo">Ingresa a tu cuenta</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form class="container">
+                <div class="mb-3">
+                    <label for="emailFormModal" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailInputFormModal" aria-describedby="emailHelp"placeholder="jose@gmail.com">
+                    <label for="passswordModal" class="form-label my-3">Contraseña</label>
+                    <input type="password" class="form-control" id="passswordModal" aria-describedby="passwordHelp" placeholder="***********">
+                    <p class="my-3 fw-light">Si no tenes cuenta todavia, creala en simples pasos (AGREGAR EL LINK DEL FORM)</p>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn colorBtnBuscar">Ingresar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     </main>
     <footer class="py-3 text-black text-center">
         <section class="container">
             <article class="row">
-                <aside class="col-12 col-md-4 justify-content-center">
+                <aside class="d-flex col-12 col-md-4 align-items-center justify-content-center">
                     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                     <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_qDJZag.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
                 </aside>
-                <aside class="d-flex flex-column col-12 col-md-4 col-sm-6 justify-content-center fs-5" >
+                <aside class="d-flex flex-column col-12 col-md-4 justify-content-center fs-5" >
                 <a href="/pages/nosotros.html" style="text-decoration:none">Acerca de Nosotros</a>
                 <a href="/pages/error.html" style="text-decoration:none">Términos y Condiciones</a>
                 <a href="/pages/error.html" style="text-decoration:none">Contacto</a>
                 </aside>
-                <aside class="d-flex col-12 col-md-4 col-sm-6 align-items-center justify-content-center">
+                <aside class="d-flex col-12 col-md-4 align-items-center justify-content-center">
                     <div class="flex-wrap fs-5">
                         <p>Redes Sociales</p>
                         <a href="/pages/error.html"><i class="bi bi-instagram"></i></a>
