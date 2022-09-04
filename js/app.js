@@ -1,11 +1,12 @@
-import {validarEmail} from "./helpers.js"
+import {validarEmail, validarPassword} from "./helpers.js"
 
 //llamamos a las funciones
 
 let emailModal = document.getElementById('emailInputFormModal');
-let passwordModal = document.getElementById('passswordModal');
+let passwordModal = document.getElementById('passwordModal');
 
 emailModal.addEventListener('blur',()=>{validarEmail(emailModal)});
+passwordModal.addEventListener('blur',()=>{validarPassword(passwordModal)});
 
 let lottie = document.getElementById("lottie");
 let body = document.getElementById("body");
