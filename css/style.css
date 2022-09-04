@@ -1,3 +1,26 @@
+footer, nav{
+    background-color: #ECF0FF;
+    color: #292929;
+    font-family: Source Sans Pro;
+}
+footer, a{
+    color: #292929;
+}
+footer, i{
+    color:#FF587C;
+}
+footer, a:hover{
+    color: #FF587C;
+}
+
+.colorBtnBuscar{
+    background-color: #7556E3;
+    color: #ECF0FF;
+}
+.dropdown-item:hover{
+    background-color: #7556E3;
+    color:#ECF0FF;
+
 .btn-azul{
     background-color: #395DEB;
     color: white;
