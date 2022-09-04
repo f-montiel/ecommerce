@@ -4,7 +4,6 @@ import {validarEmail, validarPassword} from "./helpers.js"
 
 let emailModal = document.getElementById('emailInputFormModal');
 let passwordModal = document.getElementById('passwordModal');
-
 emailModal.addEventListener('blur',()=>{validarEmail(emailModal)});
 passwordModal.addEventListener('blur',()=>{validarPassword(passwordModal)});
 
