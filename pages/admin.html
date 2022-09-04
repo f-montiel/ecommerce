@@ -56,78 +56,79 @@
       </nav>
 </header>
     <main class="container">
-        <!-- Cambiar la tipografia -->
-        <!-- agregar en el formulario de alta de productos
-            Procesador, camara, almacenamiento, tamaño de pantalla -->
         <h1>Administrador</h1>
         <hr>
         <section>
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
+                    <button class="nav-link active" id="tabProductos">Productos</button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Usuarios</a>
+                    <button class="nav-link" id="tabUsuarios">Usuarios</button>
                 </li>
             </ul>
-            <h2>Productos</h2>
-            <button class="btn btn-rosa my-3" type="button" data-bs-toggle="modal" data-bs-target="#productoModal">Agregar</button>
-            <div class="table-responsive">
-                <table class="table table-striped" id="tablaProductos">
+            <article id="productos">
+              <h2>Productos</h2>
+              <button class="btn btn-rosa my-3" type="button" data-bs-toggle="modal" data-bs-target="#productoModal">Agregar</button>
+              <div class="table-responsive">
+                  <table class="table table-striped" id="tablaProductos">
+                      <thead>
+                        <tr>
+                          <th scope="col">Código</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Marca</th>
+                          <th scope="col">Imagen</th>
+                          <th scope="col">Descripción</th>
+                          <th scope="col">Cantidad</th>
+                          <th scope="col">Precio</th>
+                          <th scope="col">Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>213rjhb23r2k3jrb</td>
+                          <td>Samsung S10</td>
+                          <td>Samsung</td>
+                          <td>https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Fvector-gratis%2Fmaqueta-dispositivo-digital_53876-89354.jpg%3Fw%3D2000&imgrefurl=https%3A%2F%2Fwww.freepik.es%2Ffotos-vectores-gratis%2Fcelular&tbnid=rmBglQvk4lMmQM&vet=12ahUKEwiNi7nu5Pn5AhW-spUCHR2uCx4QMygAegUIARDgAQ..i&docid=H4hh91sJ0R71aM&w=2000&h=2000&q=imagen%20celular&ved=2ahUKEwiNi7nu5Pn5AhW-spUCHR2uCx4QMygAegUIARDgAQ</td>
+                          <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe qui corrupti consectetur sint eveniet, ipsam voluptas quo, ea delectus similique numquam asperiores veniam ratione commodi labore a modi ut reprehenderit nam temporibus veritatis sed nostrum. Illum, totam consectetur. Eligendi, magnam!</td>
+                          <td>120</td>
+                          <td>$75000</td>
+                          <td>
+                              <button class="btn"><i class="bi bi-pencil-square fs-3 text-primary"></i></button>
+                              <button class="btn"><i class="bi bi-x-circle fs-3 text-danger"></i></button>
+                          </td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </article>
+            <article id="usuarios" class="d-none">
+              <h2>Usuarios</h2>
+              <button class="btn btn-rosa my-3">Agregar</button>
+              <div class="table-responsive">
+                  <table class="table table-striped" id="tablaUsuarios">
                     <thead>
                       <tr>
                         <th scope="col">Código</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Marca</th>
-                        <th scope="col">Imagen</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Precio</th>
+                        <th scope="col">email</th>
                         <th scope="col">Acciones</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>213rjhb23r2k3jrb</td>
-                        <td>Samsung S10</td>
-                        <td>Samsung</td>
-                        <td>https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.freepik.com%2Fvector-gratis%2Fmaqueta-dispositivo-digital_53876-89354.jpg%3Fw%3D2000&imgrefurl=https%3A%2F%2Fwww.freepik.es%2Ffotos-vectores-gratis%2Fcelular&tbnid=rmBglQvk4lMmQM&vet=12ahUKEwiNi7nu5Pn5AhW-spUCHR2uCx4QMygAegUIARDgAQ..i&docid=H4hh91sJ0R71aM&w=2000&h=2000&q=imagen%20celular&ved=2ahUKEwiNi7nu5Pn5AhW-spUCHR2uCx4QMygAegUIARDgAQ</td>
-                        <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe qui corrupti consectetur sint eveniet, ipsam voluptas quo, ea delectus similique numquam asperiores veniam ratione commodi labore a modi ut reprehenderit nam temporibus veritatis sed nostrum. Illum, totam consectetur. Eligendi, magnam!</td>
-                        <td>120</td>
-                        <td>$75000</td>
+                        <td>Facundo Montiel</td>
+                        <td>montie.facu@gmail.com</td>
                         <td>
                             <button class="btn"><i class="bi bi-pencil-square fs-3 text-primary"></i></button>
                             <button class="btn"><i class="bi bi-x-circle fs-3 text-danger"></i></button>
                         </td>
                     </tr>
                     </tbody>
-                </table>
-            </div>
-            <h2>Usuarios</h2>
-            <button class="btn btn-rosa my-3">Agregar</button>
-            <div class="table-responsive">
-                <table class="table table-striped" id="tablaUsuarios">
-                  <thead>
-                    <tr>
-                      <th scope="col">Código</th>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">email</th>
-                      <th scope="col">Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>213rjhb23r2k3jrb</td>
-                      <td>Facundo Montiel</td>
-                      <td>montie.facu@gmail.com</td>
-                      <td>
-                          <button class="btn"><i class="bi bi-pencil-square fs-3 text-primary"></i></button>
-                          <button class="btn"><i class="bi bi-x-circle fs-3 text-danger"></i></button>
-                      </td>
-                  </tr>
-                  </tbody>
-                </table>
-            </div>
+                  </table>
+              </div>
+            </article>
         </section>
         <section>
   <div class="modal fade" id="productoModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="productoModalLabel" aria-hidden="true">
@@ -139,31 +140,61 @@
         </div>
         <div class="modal-body">
           <form class="form-group">
-            <label for="codigoProducto" class="form-label">Código</label>
-            <input type="text" class="form-control" id="codigoProducto" disabled>
-            <label for="nombreProducto" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombreProducto">
-            <label for="marcaProducto" class="form-label">Marca</label>
-            <select name="marca" id="marcaProducto" class="form-control">
-                <option value="">Seleccione una marca</option>
-                <option value="apple">Apple</option>
-                <option value="motorola">Motorola</option>
-                <option value="samsung">Samsung</option>
-                <option value="xiaomi">Xiaomi</option>
-            </select>
-            <label for="imagenProducto" class="form-label">Imagen</label>
-            <input type="text" class="form-control" id="imagenProducto">
-            <label for="descripcionProducto" class="form-label">Descripción</label>
-            <textarea name="descripcion" id="descripcionProducto" cols="30" rows="3" class="form-control"></textarea>
-            <label for="cantidadProducto" class="form-label">Cantidad</label>
-            <input type="number" class="form-control" id="cantidadProducto">
-            <label for="precioProducto" class="form-label">Precio</label>
-            <input type="number" class="form-control" id="precioproducto" step="0.01">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <label for="codigoProducto" class="form-label">Código</label>
+                <input type="text" class="form-control" id="codigoProducto" disabled required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="nombreProducto" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreProducto" required minlength="2" maxlength="30">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="marcaProducto" class="form-label">Marca</label>
+                <select name="marca" id="marcaProducto" class="form-control" required>
+                    <option value="">Seleccione una marca</option>
+                    <option value="apple">Apple</option>
+                    <option value="motorola">Motorola</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="xiaomi">Xiaomi</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="procesadorProducto" class="form-label">Procesador</label>
+                <input type="text" id="procesadorProducto" class="form-control" required minlength="2" maxlength="30">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="camaraProducto" class="form-label">Cámara</label>
+                <input type="text" id="camaraProducto" class="form-control" required minlength="3" maxlength="30">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="almacenamientoProducto" class="form-label">Almacenamiento</label>
+                <input type="text" id="almacenamientoProducto" class="form-control" required minlength="3" maxlength="10">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="pantallaProducto" class="form-label">Pantalla</label>
+                <input type="text" id="pantallaProducto" class="form-control" required minlength="3" max="10">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="imagenProducto" class="form-label">Imagen</label>
+                <input type="text" class="form-control" id="imagenProducto" required minlength="10" maxlength="100">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="cantidadProducto" class="form-label">Cantidad</label>
+                <input type="number" class="form-control" id="cantidadProducto" required min="1">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="precioProducto" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="precioproducto" step="0.01" required min="0.01">
+              </div>
+              <div class="col-12">
+                <label for="descripcionProducto" class="form-label">Descripción</label>
+                <textarea name="descripcion" id="descripcionProducto" cols="30" rows="3" class="form-control" required minlength="10" maxlength="200"></textarea>
+              </div>
+            </div>
+            <button type="button" class="btn btn-gris my-3" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-azul my-3">Guardar</button>
           </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-gris" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-azul">Guardar</button>
         </div>
       </div>
     </div>
@@ -188,7 +219,7 @@
                         <aside class="d-flex">
                             <a href="error.html"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                             <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_f5ytlpiy.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player></i></a>
-                        <a href="../index.html"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <a href="error.html"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                             <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_up3nxxtl.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player></i></a> 
                         <a href="error.html"><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                             <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_pb3we3yk.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player></a>
@@ -200,6 +231,6 @@
         </section>
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script> 
-    <script src="js/app.js"></script>
+    <script src="../js/admin.js"></script>
 </body>
 </html>
