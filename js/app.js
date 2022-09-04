@@ -1,3 +1,12 @@
+import {validarEmail} from "./helpers.js"
+
+//llamamos a las funciones
+
+let emailModal = document.getElementById('emailInputFormModal');
+let passwordModal = document.getElementById('passswordModal');
+
+emailModal.addEventListener('blur',()=>{validarEmail(emailModal)});
+
 let lottie = document.getElementById("lottie");
 let body = document.getElementById("body");
 let timeOut = setTimeout(() => {
