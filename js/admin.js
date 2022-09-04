@@ -62,7 +62,8 @@ function mostrarFormulario(){
     codigoProducto.value = uuidv4();
 }
 
-let listaProductos = [];
+let listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+
 function crearNuevoProducto(e){
     e.preventDefault()
 
@@ -87,6 +88,7 @@ function crearNuevoProducto(e){
 
 function agregarNuevoProducto(nuevoProducto){
     listaProductos.push(nuevoProducto);
+    guardarProductosenLocalStorage();
 }
 
 function limpiarFormulario(){
@@ -103,3 +105,7 @@ function limpiarFormulario(){
     descripcionProducto.classList.remove("is-valid");
 }
 
+//agregar en localStorage
+function guardarProductosenLocalStorage(){
+    localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
+}
