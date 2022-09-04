@@ -38,6 +38,7 @@ tabProductos.addEventListener("click", function (){mostrarTabla("productos"); ac
 tabUsuarios.addEventListener("click",function (){mostrarTabla("usuarios"); activeTab(this)});
 let articuloProductos = document.getElementById("productos");
 let articuloUsuarios = document.getElementById("usuarios");
+
 function mostrarTabla(tabla){
     ocultarTablas();
     if(tabla == "productos"){
@@ -62,6 +63,7 @@ function mostrarFormulario(){
 }
 
 let listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+crearTablaProductos();
 
 function crearNuevoProducto(e){
     e.preventDefault()
@@ -80,9 +82,9 @@ function crearNuevoProducto(e){
         descripcionProducto.value
     )
     agregarNuevoProducto(nuevoProducto);
-    console.log(listaProductos);
     limpiarFormulario();
     modalAdministrador.hide();
+
 }
 
 function agregarNuevoProducto(nuevoProducto){
@@ -112,8 +114,10 @@ function guardarProductosenLocalStorage(){
 
 //armado de tabla dinamica de productos
 
-function crearTablaProductos(producto){
-    bodyTablaProductos.innerHTML +=    
+function crearTablaProductos(){
+    borrarTabla();
+    listaProductos.forEach(producto => {
+        bodyTablaProductos.innerHTML +=    
     `<tr>
     <td>${producto.codigo}</td>
     <td>${producto.nombre}</td>
@@ -131,4 +135,9 @@ function crearTablaProductos(producto){
         <button class="btn"><i class="bi bi-x-circle fs-3 text-danger"></i></button>
     </td>
 </tr>`
+    });
+}
+
+function borrarTabla(){
+    bodyTablaProductos.innerHTML ='';
 }
