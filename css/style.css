@@ -12,15 +12,10 @@ footer, i{
 footer, a:hover{
     color: #FF587C;
 }
-
-.colorBtnBuscar{
-    background-color: #7556E3;
-    color: #ECF0FF;
-}
 .dropdown-item:hover{
     background-color: #7556E3;
     color:#ECF0FF;
-
+}
 .btn-azul{
     background-color: #395DEB;
     color: white;
