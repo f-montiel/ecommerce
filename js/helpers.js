@@ -14,3 +14,21 @@ export function validarPassword(input){
         input.className = 'form-control is-invalid';
     }
 }
+
+
+export function validarNombreProducto(input){
+    if(input.value.length >2 && input.value.length <30){
+        input.className = 'form-control is-valid';
+        console.log("funcion validar nombre")
+    }else{
+        input.className = 'form-control is-invalid';
+    }
+}
+
+export function validarMarca (opcion){
+    if(opcion.value.trim().length > 0){
+        opcion.className = 'form-control is-valid';
+    }else{
+        opcion.className = 'form-control is-invalid';
+    }
+}
