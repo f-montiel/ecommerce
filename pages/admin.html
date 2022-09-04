@@ -56,8 +56,6 @@
       </nav>
 </header>
     <main class="container">
-        <!-- agregar en el formulario de alta de productos
-            Procesador, camara, almacenamiento, tamaño de pantalla -->
         <h1>Administrador</h1>
         <hr>
         <section>
@@ -142,31 +140,61 @@
         </div>
         <div class="modal-body">
           <form class="form-group">
-            <label for="codigoProducto" class="form-label">Código</label>
-            <input type="text" class="form-control" id="codigoProducto" disabled>
-            <label for="nombreProducto" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombreProducto">
-            <label for="marcaProducto" class="form-label">Marca</label>
-            <select name="marca" id="marcaProducto" class="form-control">
-                <option value="">Seleccione una marca</option>
-                <option value="apple">Apple</option>
-                <option value="motorola">Motorola</option>
-                <option value="samsung">Samsung</option>
-                <option value="xiaomi">Xiaomi</option>
-            </select>
-            <label for="imagenProducto" class="form-label">Imagen</label>
-            <input type="text" class="form-control" id="imagenProducto">
-            <label for="descripcionProducto" class="form-label">Descripción</label>
-            <textarea name="descripcion" id="descripcionProducto" cols="30" rows="3" class="form-control"></textarea>
-            <label for="cantidadProducto" class="form-label">Cantidad</label>
-            <input type="number" class="form-control" id="cantidadProducto">
-            <label for="precioProducto" class="form-label">Precio</label>
-            <input type="number" class="form-control" id="precioproducto" step="0.01">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <label for="codigoProducto" class="form-label">Código</label>
+                <input type="text" class="form-control" id="codigoProducto" disabled required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="nombreProducto" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreProducto" required minlength="2" maxlength="30">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="marcaProducto" class="form-label">Marca</label>
+                <select name="marca" id="marcaProducto" class="form-control" required>
+                    <option value="">Seleccione una marca</option>
+                    <option value="apple">Apple</option>
+                    <option value="motorola">Motorola</option>
+                    <option value="samsung">Samsung</option>
+                    <option value="xiaomi">Xiaomi</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="procesadorProducto" class="form-label">Procesador</label>
+                <input type="text" id="procesadorProducto" class="form-control" required minlength="2" maxlength="30">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="camaraProducto" class="form-label">Cámara</label>
+                <input type="text" id="camaraProducto" class="form-control" required minlength="3" maxlength="30">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="almacenamientoProducto" class="form-label">Almacenamiento</label>
+                <input type="text" id="almacenamientoProducto" class="form-control" required minlength="3" maxlength="10">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="pantallaProducto" class="form-label">Pantalla</label>
+                <input type="text" id="pantallaProducto" class="form-control" required minlength="3" max="10">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="imagenProducto" class="form-label">Imagen</label>
+                <input type="text" class="form-control" id="imagenProducto" required minlength="10" maxlength="100">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="cantidadProducto" class="form-label">Cantidad</label>
+                <input type="number" class="form-control" id="cantidadProducto" required min="1">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="precioProducto" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="precioproducto" step="0.01" required min="0.01">
+              </div>
+              <div class="col-12">
+                <label for="descripcionProducto" class="form-label">Descripción</label>
+                <textarea name="descripcion" id="descripcionProducto" cols="30" rows="3" class="form-control" required minlength="10" maxlength="200"></textarea>
+              </div>
+            </div>
+            <button type="button" class="btn btn-gris my-3" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-azul my-3">Guardar</button>
           </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-gris" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-azul">Guardar</button>
         </div>
       </div>
     </div>
