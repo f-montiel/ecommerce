@@ -1,4 +1,9 @@
 import {validarAlmacenamiento, validarCamara, validarCantidad, validarDescripcion, validarImagen, validarMarca, validarNombreProducto, validarPantalla, validarPrecio, validarProcesador} from "./helpers.js"
+import Producto from "./claseProducto.js"
+
+//ventana modal Administrador
+const modalAdministrador = new bootstrap.Modal(document.getElementById("productoModal"));
+const botonModalAdministrador = document.getElementById("botonModalProducto");
 
 let formularioProducto = document.getElementById("formularioProducto");
 let nombreProducto = formularioProducto.nombreProducto;
@@ -11,7 +16,7 @@ let imagenProducto = formularioProducto.imagenProducto;
 let cantidadProducto = formularioProducto.cantidadProducto;
 let precioProducto = formularioProducto.precioProducto;
 let descripcionProducto = formularioProducto.descripcionProducto;
-
+let codigoProducto = formularioProducto.codigoProducto;
 
 nombreProducto.addEventListener("blur",()=>{validarNombreProducto(nombreProducto)});
 marcaProducto.addEventListener("change",()=>{validarMarca(marcaProducto)});
@@ -23,7 +28,7 @@ imagenProducto.addEventListener("blur",()=>{validarImagen(imagenProducto)});
 cantidadProducto.addEventListener("blur",()=>{validarCantidad(cantidadProducto)});
 precioProducto.addEventListener("blur",()=>{validarPrecio(precioProducto)});
 descripcionProducto.addEventListener("blur",()=>{validarDescripcion(descripcionProducto)});
-
+botonModalAdministrador.addEventListener("click",mostrarFormulario);
 
 let tabProductos = document.getElementById("tabProductos");
 let tabUsuarios = document.getElementById("tabUsuarios");
@@ -48,4 +53,10 @@ function activeTab(tab){
     tabProductos.classList.remove("active");
     tabUsuarios.classList.remove("active");
     tab.classList.add("active");
+}
+
+
+function mostrarFormulario(){
+    modalAdministrador.show();
+    codigoProducto.value = uuidv4();
 }
