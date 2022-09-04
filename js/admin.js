@@ -18,6 +18,7 @@ let precioProducto = formularioProducto.precioProducto;
 let descripcionProducto = formularioProducto.descripcionProducto;
 let codigoProducto = formularioProducto.codigoProducto;
 formularioProducto.addEventListener("submit",crearNuevoProducto);
+let bodyTablaProductos = document.getElementById('bodyTablaProductos');
 
 nombreProducto.addEventListener("blur",()=>{validarNombreProducto(nombreProducto)});
 marcaProducto.addEventListener("change",()=>{validarMarca(marcaProducto)});
@@ -55,8 +56,6 @@ function activeTab(tab){
     tabUsuarios.classList.remove("active");
     tab.classList.add("active");
 }
-
-
 function mostrarFormulario(){
     modalAdministrador.show();
     codigoProducto.value = uuidv4();
@@ -89,6 +88,7 @@ function crearNuevoProducto(e){
 function agregarNuevoProducto(nuevoProducto){
     listaProductos.push(nuevoProducto);
     guardarProductosenLocalStorage();
+    crearTablaProductos(nuevoProducto);
 }
 
 function limpiarFormulario(){
@@ -108,4 +108,27 @@ function limpiarFormulario(){
 //agregar en localStorage
 function guardarProductosenLocalStorage(){
     localStorage.setItem("listaProductosKey", JSON.stringify(listaProductos));
+}
+
+//armado de tabla dinamica de productos
+
+function crearTablaProductos(producto){
+    bodyTablaProductos.innerHTML +=    
+    `<tr>
+    <td>${producto.codigo}</td>
+    <td>${producto.nombre}</td>
+    <td>${producto.marca}</td>
+    <td>${producto.procesador}</td>
+    <td>${producto.camara}</td>
+    <td>${producto.almacenamiento}</td>
+    <td>${producto.pantalla}</td>
+    <td>${producto.imagen}</td>
+    <td>${producto.stock}</td>
+    <td>${producto.precio}</td>
+    <td>${producto.descripcion}</td>
+    <td>
+        <button class="btn"><i class="bi bi-pencil-square fs-3 text-primary"></i></button>
+        <button class="btn"><i class="bi bi-x-circle fs-3 text-danger"></i></button>
+    </td>
+</tr>`
 }
