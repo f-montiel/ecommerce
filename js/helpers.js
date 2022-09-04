@@ -19,16 +19,80 @@ export function validarPassword(input){
 export function validarNombreProducto(input){
     if(input.value.length >2 && input.value.length <30){
         input.className = 'form-control is-valid';
-        console.log("funcion validar nombre")
     }else{
         input.className = 'form-control is-invalid';
     }
 }
 
 export function validarMarca (opcion){
-    if(opcion.value.trim().length > 0){
+    if(opcion.value.length > 0){
         opcion.className = 'form-control is-valid';
     }else{
         opcion.className = 'form-control is-invalid';
+    }
+}
+
+export function validarProcesador (input){
+    if(input.value.length >2 && input.value.length <30){
+        input.className = 'form-control is-valid';
+    }else{
+        input.className = 'form-control is-invalid';
+    }
+}
+
+export function validarCamara (input){
+    if(input.value.length >3 && input.value.length <30){
+        input.className = 'form-control is-valid';
+    }else{
+        input.className = 'form-control is-invalid';
+    }
+}
+
+export function validarAlmacenamiento (input){
+    if(input.value.length >2 && input.value.length <10){
+        input.className = 'form-control is-valid';
+    }else{
+        input.className = 'form-control is-invalid';
+    }
+}
+
+export function validarPantalla (input){
+    if(input.value.length >3 && input.value.length <10){
+        input.className = 'form-control is-valid';
+    }else{
+        input.className = 'form-control is-invalid';
+    }
+}
+
+export function validarImagen (input){
+    let expresionRegularImg = /^(ftp|http|https):\/\/[^ "]+$/
+    if(expresionRegularImg.test(input.value)){
+        input.className = 'form-control is-valid';
+    }else{
+        input.className = 'form-control is-invalid';
+    }
+}
+
+export function validarCantidad (input){
+    if(input.value >= 1){
+        input.className = 'form-control is-valid';
+    }else{
+        input.className = 'form-control is-invalid';
+    }
+}
+
+export function validarPrecio (input){
+    if(input.value >= 1){
+        input.className = 'form-control is-valid';
+    }else{
+        input.className = 'form-control is-invalid';
+    }
+}
+
+export function validarDescripcion (input){
+    if(input.value.length >10 && input.value.length <200){
+        input.className = 'form-control is-valid';
+    }else{
+        input.className = 'form-control is-invalid';
     }
 }
