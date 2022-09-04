@@ -9,7 +9,7 @@ function mostrarBody(){
     clearTimeout(timeOut);
 }
 let marca = document.getElementById("marca");
-let str = marca.innerHTML;
+let str = "PuntoCel";
 marca.innerHTML = "";
 let speed = 500;
 let i = 0;
