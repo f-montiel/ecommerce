@@ -49,4 +49,10 @@ class Producto {
     set modificarPantalla(pantalla){
         this.pantalla = pantalla;
     }
+    get obtenerPantalla(){
+        return this.pantalla;
+    }
+    set modificarPantalla(pantalla){
+        this.pantalla = pantalla;
+    }
 }
