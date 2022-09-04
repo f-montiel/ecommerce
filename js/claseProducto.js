@@ -55,4 +55,16 @@ class Producto {
     set modificarPantalla(pantalla){
         this.pantalla = pantalla;
     }
+    get obtenerStock(){
+        return this.stock;
+    }
+    set modificarPrecio(precio){
+        this.precio = precio;
+    }
+    get obtenerDescripcion(){
+        return this.descripcion;
+    }
+    set modificarDescripcion(descripcion){
+        this.descripcion = descripcion;
+    }
 }
