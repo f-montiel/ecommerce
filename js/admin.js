@@ -17,6 +17,7 @@ let cantidadProducto = formularioProducto.cantidadProducto;
 let precioProducto = formularioProducto.precioProducto;
 let descripcionProducto = formularioProducto.descripcionProducto;
 let codigoProducto = formularioProducto.codigoProducto;
+formularioProducto.addEventListener("submit",crearNuevoProducto);
 
 nombreProducto.addEventListener("blur",()=>{validarNombreProducto(nombreProducto)});
 marcaProducto.addEventListener("change",()=>{validarMarca(marcaProducto)});
@@ -60,3 +61,45 @@ function mostrarFormulario(){
     modalAdministrador.show();
     codigoProducto.value = uuidv4();
 }
+
+let listaProductos = [];
+function crearNuevoProducto(e){
+    e.preventDefault()
+
+    let nuevoProducto = new Producto(
+        codigoProducto.value,
+        nombreProducto.value,
+        marcaProducto.value,
+        procesadorProducto.value,
+        camaraProducto.value,
+        almacenamientoProducto.value,
+        pantallaProducto.value,
+        imagenProducto.value,
+        cantidadProducto.value,
+        precioProducto.value,
+        descripcionProducto.value
+    )
+    agregarNuevoProducto(nuevoProducto);
+    console.log(listaProductos);
+    limpiarFormulario();
+    modalAdministrador.hide();
+}
+
+function agregarNuevoProducto(nuevoProducto){
+    listaProductos.push(nuevoProducto);
+}
+
+function limpiarFormulario(){
+    formularioProducto.reset();
+    nombreProducto.classList.remove("is-valid");
+    marcaProducto.classList.remove("is-valid");
+    procesadorProducto.classList.remove("is-valid");
+    camaraProducto.classList.remove("is-valid");
+    almacenamientoProducto.classList.remove("is-valid");
+    pantallaProducto.classList.remove("is-valid");
+    imagenProducto.classList.remove("is-valid");
+    cantidadProducto.classList.remove("is-valid");
+    precioProducto.classList.remove("is-valid");
+    descripcionProducto.classList.remove("is-valid");
+}
+
