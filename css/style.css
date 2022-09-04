@@ -93,3 +93,16 @@ footer, a:hover{
     color: white;
     box-shadow: 0px 0px 0px 4px #aab9f5;
 }
+.lottie-footer-logo{
+    width: 150px; 
+    height: 150px;
+    background-color: transparent;
+}
+.lottie-nav{
+    width: 80px; 
+    height: 80px;
+}
+.lottie-icono{
+    width: 50px; 
+    height: 50px;
+}
