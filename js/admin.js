@@ -119,17 +119,17 @@ function crearTablaProductos(){
     listaProductos.forEach(producto => {
         bodyTablaProductos.innerHTML +=    
     `<tr>
-    <td>${producto.codigo}</td>
+    <td class="truncate-text d-none d-md-table-cell">${producto.codigo}</td>
     <td>${producto.nombre}</td>
     <td>${producto.marca}</td>
-    <td>${producto.procesador}</td>
-    <td>${producto.camara}</td>
-    <td>${producto.almacenamiento}</td>
-    <td>${producto.pantalla}</td>
-    <td>${producto.imagen}</td>
+    <td class="d-none d-md-table-cell">${producto.procesador}</td>
+    <td class="d-none d-md-table-cell">${producto.camara}</td>
+    <td class="d-none d-md-table-cell">${producto.almacenamiento}</td>
+    <td class="d-none d-md-table-cell">${producto.pantalla}</td>
+    <td class="truncate-text d-none d-md-table-cell">${producto.imagen}</td>
     <td>${producto.stock}</td>
     <td>${producto.precio}</td>
-    <td>${producto.descripcion}</td>
+    <td class="truncate-text d-none d-md-table-cell">${producto.descripcion}</td>
     <td>
         <button class="btn"><i class="bi bi-pencil-square fs-3 text-primary"></i></button>
         <button class="btn"><i class="bi bi-x-circle fs-3 text-danger"></i></button>
