@@ -6,6 +6,7 @@ const modalAdministrador = new bootstrap.Modal(document.getElementById("producto
 const botonModalAdministrador = document.getElementById("botonModalProducto");
 
 let formularioProducto = document.getElementById("formularioProducto");
+let codigoProducto = formularioProducto.codigoProducto;
 let nombreProducto = formularioProducto.nombreProducto;
 let marcaProducto = formularioProducto.marcaProducto;
 let almacenamientoProducto = formularioProducto.almacenamientoProducto;
@@ -16,7 +17,6 @@ let imagenProducto = formularioProducto.imagenProducto;
 let cantidadProducto = formularioProducto.cantidadProducto;
 let precioProducto = formularioProducto.precioProducto;
 let descripcionProducto = formularioProducto.descripcionProducto;
-let codigoProducto = formularioProducto.codigoProducto;
 formularioProducto.addEventListener("submit",crearNuevoProducto);
 let bodyTablaProductos = document.getElementById('bodyTablaProductos');
 
@@ -131,7 +131,7 @@ function crearTablaProductos(){
     <td>${producto.precio}</td>
     <td class="truncate-text d-none d-md-table-cell">${producto.descripcion}</td>
     <td>
-        <button class="btn"><i class="bi bi-pencil-square fs-3 text-primary"></i></button>
+        <button class="btn"><i class="bi bi-pencil-square fs-3 text-primary" onclick="editarProducto('${producto.codigo}')"></i></button>
         <button class="btn"><i class="bi bi-x-circle fs-3 text-danger"></i></button>
     </td>
 </tr>`
@@ -141,3 +141,23 @@ function crearTablaProductos(){
 function borrarTabla(){
     bodyTablaProductos.innerHTML ='';
 }
+
+//actualizacion de los productos
+window.editarProducto = (codigoBuscado)=> {
+    modalAdministrador.show();
+    let productoEncontrado = listaProductos.find((productos) => productos.codigo === codigoBuscado);
+    codigoProducto.value = productoEncontrado.codigo;
+    nombreProducto.value = productoEncontrado.nombre;
+    marcaProducto.value = productoEncontrado.marca;
+    procesadorProducto.value = productoEncontrado.procesador;
+    camaraProducto.value = productoEncontrado.camara;
+    almacenamientoProducto.value = productoEncontrado.almacenamiento;
+    pantallaProducto.value = productoEncontrado.pantalla;
+    imagenProducto.value = productoEncontrado.imagen;
+    cantidadProducto.value = productoEncontrado.stock;
+    precioProducto.value = productoEncontrado.precio;
+    descripcionProducto.value = productoEncontrado.descripcion;
+
+
+}
+
