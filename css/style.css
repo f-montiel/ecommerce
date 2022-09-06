@@ -114,3 +114,10 @@ footer, a:hover{
 .card{
     border: none;
 }
+.truncate-text {
+    white-space: nowrap; 
+    max-width: 120px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
