@@ -31,6 +31,7 @@ cantidadProducto.addEventListener("blur",()=>{validarCantidad(cantidadProducto)}
 precioProducto.addEventListener("blur",()=>{validarPrecio(precioProducto)});
 descripcionProducto.addEventListener("blur",()=>{validarDescripcion(descripcionProducto)});
 botonModalAdministrador.addEventListener("click",mostrarFormulario);
+document.getElementById("productoModal").addEventListener("hidden.bs.modal", limpiarFormulario);
 
 let tabProductos = document.getElementById("tabProductos");
 let tabUsuarios = document.getElementById("tabUsuarios");
@@ -144,7 +145,6 @@ function borrarTabla(){
 
 //actualizacion de los productos
 window.editarProducto = (codigoBuscado)=> {
-    modalAdministrador.show();
     let productoEncontrado = listaProductos.find((productos) => productos.codigo === codigoBuscado);
     codigoProducto.value = productoEncontrado.codigo;
     nombreProducto.value = productoEncontrado.nombre;
@@ -157,7 +157,7 @@ window.editarProducto = (codigoBuscado)=> {
     cantidadProducto.value = productoEncontrado.stock;
     precioProducto.value = productoEncontrado.precio;
     descripcionProducto.value = productoEncontrado.descripcion;
-
-
+    
+    modalAdministrador.show();
 }
 
