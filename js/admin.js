@@ -67,25 +67,39 @@ let listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || []
 crearTablaProductos();
 
 function crearNuevoProducto(e){
-    e.preventDefault()
-
-    let nuevoProducto = new Producto(
-        codigoProducto.value,
-        nombreProducto.value,
-        marcaProducto.value,
-        procesadorProducto.value,
-        camaraProducto.value,
-        almacenamientoProducto.value,
-        pantallaProducto.value,
-        imagenProducto.value,
-        cantidadProducto.value,
-        precioProducto.value,
-        descripcionProducto.value
-    )
-    agregarNuevoProducto(nuevoProducto);
+    e.preventDefault();
+    let editarProducto = listaProductos.find((producto)=> codigoProducto.value === producto.codigo)
+    if(editarProducto){
+        editarProducto.nombre = nombreProducto.value;
+        editarProducto.marca = marcaProducto.value;
+        editarProducto.procesador = procesadorProducto.value;
+        editarProducto.camara = camaraProducto.value;
+        editarProducto.almacenamiento = almacenamientoProducto.value;
+        editarProducto.pantalla = pantallaProducto.value;
+        editarProducto.imagen = imagenProducto.value;
+        editarProducto.cantidad = cantidadProducto.value;
+        editarProducto.precio = precioProducto.value;
+        editarProducto.descripcion = descripcionProducto.value;
+        guardarProductosenLocalStorage();
+        crearTablaProductos();
+    }else{
+        let nuevoProducto = new Producto(
+            codigoProducto.value,
+            nombreProducto.value,
+            marcaProducto.value,
+            procesadorProducto.value,
+            camaraProducto.value,
+            almacenamientoProducto.value,
+            pantallaProducto.value,
+            imagenProducto.value,
+            cantidadProducto.value,
+            precioProducto.value,
+            descripcionProducto.value
+        )
+        agregarNuevoProducto(nuevoProducto);
+    }
     limpiarFormulario();
     modalAdministrador.hide();
-
 }
 
 function agregarNuevoProducto(nuevoProducto){
