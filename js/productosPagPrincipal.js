@@ -27,4 +27,5 @@ cargaDeProductos();
 
 window.verPaginaDetalle = function (codigo){
     console.log(window.location.origin +"/pages/detalle.html?producto="+codigo);
+    window.location.href = window.location.origin +"/pages/detalle.html?producto="+codigo;
 }
