@@ -132,7 +132,7 @@ function guardarProductosenLocalStorage(){
 function crearTablaProductos(){
     borrarTabla();
     listaProductos.forEach(producto => {
-        bodyTablaProductos.innerHTML +=    
+        bodyTablaProductos.innerHTML +=
     `<tr>
     <td class="truncate-text d-none d-md-table-cell">${producto.codigo}</td>
     <td>${producto.nombre}</td>
@@ -147,7 +147,7 @@ function crearTablaProductos(){
     <td class="truncate-text d-none d-md-table-cell">${producto.descripcion}</td>
     <td>
         <button class="btn"><i class="bi bi-pencil-square fs-3 text-primary" onclick="editarProducto('${producto.codigo}')"></i></button>
-        <button class="btn"><i class="bi bi-x-circle fs-3 text-danger"></i></button>
+        <button class="btn"><i class="bi bi-x-circle fs-3 text-danger" onclick="borrarProducto('${producto.codigo}')"></i></button>
     </td>
 </tr>`
     });
@@ -171,7 +171,30 @@ window.editarProducto = (codigoBuscado)=> {
     cantidadProducto.value = productoEncontrado.stock;
     precioProducto.value = productoEncontrado.precio;
     descripcionProducto.value = productoEncontrado.descripcion;
-    
+
     modalAdministrador.show();
 }
 
+
+ window.borrarProducto = (codigo)=> {
+   Swal.fire({
+     title: 'Seguro que quieres borrar?',
+     showDenyButton: true,
+     showCancelButton: false,
+     confirmButtonText: 'Borrar',
+     denyButtonText: `No borrar`,
+   }).then((result) => {
+     if (result.isConfirmed) {
+         let productoAEliminar = listaProductos.filter(
+             (producto) => producto.codigo != codigo
+           );
+           listaProductos = productoAEliminar;
+           console.log(productoAEliminar);
+       Swal.fire('Borrado con éxito!', '', 'success')
+       guardarProductosenLocalStorage();
+       crearTablaProductos();
+     } else if (result.isDenied) {
+       Swal.fire('Changes are not saved', '', 'info')
+     }
+   })
+ };
