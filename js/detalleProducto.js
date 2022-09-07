@@ -1,4 +1,3 @@
-console.log(window.location.search)
 const parametroUrl = new URLSearchParams(window.location.search);
 console.log(parametroUrl.get("producto"));
 

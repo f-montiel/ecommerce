@@ -3,7 +3,7 @@ let listaProductos =
 let grillaCelulares = document.getElementById("grillaCelulares");
 
 function cargaDeProductos() {
-  if (listaProductos.length >= 0) {
+  if (listaProductos.length > 0) {
     listaProductos.forEach((celular) => {
       crearGrilla(celular);
     });
