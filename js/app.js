@@ -10,7 +10,8 @@ let lottie = document.getElementById("lottie");
 let body = document.getElementById("body");
 let timeOut = setTimeout(() => {
     mostrarBody()
-}, 5000);
+}, 200);
+//poner lottie en 5000 (speed)
 function mostrarBody(){
     document.querySelector("body").removeChild(lottie);
     body.classList.remove("d-none");
