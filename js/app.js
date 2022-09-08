@@ -1,5 +1,4 @@
 import {validarEmail, validarPassword} from "./helpers.js"
-
 //llamamos a las funciones
 
 let emailModal = document.getElementById('emailInputFormModal');
