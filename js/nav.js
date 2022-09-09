@@ -73,7 +73,7 @@ function chequearUsuario(){
 }
 
 function ocultarBotonLogin(){
-  usuarioLogueado = localStorage.getItem("usuarioLogueado");
+  usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
   if(usuarioLogueado){
     btnLogin.classList.add("d-none");
   } else{
