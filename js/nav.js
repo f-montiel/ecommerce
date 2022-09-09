@@ -84,9 +84,7 @@ function mostrarIconoUsuario(){
   usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
   if(usuarioLogueado){
     iconoUsuario.classList.remove("d-none");
-    console.log(usuarioLogueado);
     if(usuarioLogueado.admin){
-      console.log("El Usuario es admin")
       //Si el usuario es admin
       if(window.location.pathname == "/"){
         // Si la pagina es el inicio
@@ -96,7 +94,6 @@ function mostrarIconoUsuario(){
         iconoUsuario.setAttribute("href", "../pages/admin.html");
       }
     } else {
-      console.log("El usuario no es admin");
       // si el usuario no es admin.
       if(window.location.pathname == "/"){
         // Si la pagina es el inicio
