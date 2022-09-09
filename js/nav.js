@@ -1,4 +1,3 @@
-let btnIngresar = document.getElementById("btnIngresar");
 let btnLogin = document.getElementById("btnLogin");
 let iconoUsuario = document.getElementById("iconoUsuario");
 let iconoCarrito = document.getElementById("iconoCarrito");
@@ -35,11 +34,17 @@ formularioLogin.addEventListener("submit", ingresar);
 
 function ingresar(e){
   e.preventDefault();
-  usuarios.forEach((usuario) => {
-    if (
-      emailInputFormModal.value === usuario.email &&
-      passwordModal.value === usuario.password
-      ) {
+  let usuario = usuarios.find((usuario)=>{return usuario.email === emailInputFormModal.value});
+  if(!usuario){
+    Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'El usuario ingresado no existe',
+        })
+        limpiarFormulario();
+  }
+
+  if (passwordModal.value === usuario.password) {
         usuarioLogueado = usuario;
         guardarUsuariosEnLocalStorage();
         chequearUsuario();
@@ -52,7 +57,6 @@ function ingresar(e){
         })
         limpiarFormulario();
       }
-    })
   }
 
 function guardarUsuariosEnLocalStorage() {
