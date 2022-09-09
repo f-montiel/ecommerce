@@ -14,6 +14,9 @@ footer, a{
 footer, i{
     color:#FF587C;
 }
+footer, i:hover{
+    color:#ff2f5c;
+}
 footer, a:hover{
     color: #FF587C;
 }
