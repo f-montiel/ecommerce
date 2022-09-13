@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"
+        content="Josefina Daoua, Victoria Palacio Fernandez, Julian Lopez, Eliseo Espindola, Facundo Montiel">
+    <meta name="description"
+        content="Ecommerce de celulares, pagina administrador donde se pueden agregar productos y usuarios">
+    <meta name="keywords" content="Ecommerce, Celulares, Venta, Samsung, Motorola, Iphone, Xiaomi, productos, usuarios">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>PuntoCel</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_qDJZag.json"
+                        background="transparent" speed="1" class="lottie-nav" loop autoplay></lottie-player>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4 fw-bolder" aria-current="page"
+                                href="../index.html">PuntoCel</a>
+                        </li>
+                    </ul>
+                    <ul class="mt-2">
+                        <li class="list-group-item">
+                            <a class="d-none" href="#" id="iconoUsuario"><i
+                                    class="bi bi-person-circle fs-2 mx-2"></i></a>
+                            <a class="d-none" href="#" id="iconoCarrito"><i class="bi bi-cart-plus fs-2 mx-2"></i></a>
+                            <a class="d-none" href="#" id="btnCerrarSecion"><i class="bi bi-x-lg fs-2 mx-2"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <h1 class="text-center my-3 fw-bolder tituloNosotros">Acerca de Nosotros</h1>
+            <section class="row d-flex justify-content-center">
+                <aside class="col-sm-12 col-md-5 mx-2 my-2 border rounded-3">
+                    <h3 class="display-6 mx-3 text-center tituloNosotros">Misión</h3>
+                    <p class="lead mx-3 text-center">
+                        Te ofrecemos un Ecommerce donde puedes encontrar las últimas tecnologías y un acompañamiento
+                        activo durante tu proceso de compra para ayudarte a elegir el modelo que mejor se adapte a vos.
+                    </p>
+                </aside>
+                <aside class="col-sm-12 col-md-5 mx-2 my-2 border rounded-3">
+                    <h3 class="display-6 mx-3 text-center tituloNosotros">Visión</h3>
+                    <p class="lead mx-3 text-center">
+                        Somos un grupo de estudiantes de programación cuyo objetivo es brindar
+                        un Ecommerce eficiente, rápido y elegido por los usuarios.
+                    </p>
+                </aside>
+            </section>
+        <section class="row d-flex justify-content-center">
+            <div class="card col-12 col-md-6 col-lg-4 my-2 background aling-items-center border-0">
+                <div class="divImagen">
+                    <img src="/img/foto perfil.PNG" class="card-img-top avatar w-75"
+                        alt="Facundo Montiel" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title lead fw-bold divAvatar">Facundo Montiel</h5>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/eliseoe95"><i class="bi bi-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/eliseoespindola/"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/EliseoEspindola"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/eliseo.espindola.7"><i class="bi bi-facebook"></i></i></a>
+                        </li>
+                    </ul>
+                    <p class="card-text lead fw-bold divAvatar">
+                        37 años. <br>
+                        Product Master. <br>
+                        En sus tiempos libres juega al fútbol.
+                    </p>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 my-2 background aling-items-center border-0">
+                <div class="divImagen">
+                    <img src="/img/WhatsApp Image 2022-09-08 at 5.36.29 PM.jpeg" class="card-img-top avatar w-75"
+                        alt="Josefina Daoua" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title lead fw-bold divAvatar">Josefina Daoua</h5>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/jochyd"><i class="bi bi-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/_josefina_d/"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/jodaoua"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/jo.daoua"><i class="bi bi-facebook"></i></i></a>
+                        </li>
+                    </ul>
+                    <p class="card-text lead fw-bold divAvatar">
+                        33 años. <br>
+                    Técnica en Administración de Empresas. <br>
+                    En sus tiempos libres arma rompecabezas.
+                    </p>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 my-2 background aling-items-center border-0">
+                <div class="divImagen">
+                    <img src="/img/WhatsApp Image 2022-09-09 at 9.35.35 PM.jpeg" class="card-img-top avatar w-75"
+                        alt="avatar Eliseo" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title lead fw-bold divAvatar">Eliseo Espindola</h5>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/eliseoe95"><i class="bi bi-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/eliseoespindola/"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/EliseoEspindola"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/eliseo.espindola.7"><i class="bi bi-facebook"></i></i></a>
+                        </li>
+                    </ul>
+                    <p class="card-text lead fw-bold divAvatar">
+                        27 años. <br>
+                        Empleado de comercio. <br>
+                        En sus tiempos libres realiza crossfit.
+                    </p>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 my-2 background aling-items-center border-0">
+                <div class="divImagen">
+                    <img src="/img/WhatsApp Image 2022-09-09 at 9.47.16 PM.jpeg" class="card-img-top avatar w-75"
+                        alt="Victoria Palacio Fernández" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title lead fw-bold divAvatar">Victoria Palacio Fernández</h5>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/vicopalacio"><i class="bi bi-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/vicopalacio/"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/viqui_palacio"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/vicky_palacios_fernandez"><i
+                                    class="bi bi-facebook"></i></i></a>
+                        </li>
+                    </ul>
+                    <p class="card-text lead fw-bold divAvatar">
+                        25 años. <br>
+                        Odontóloga. <br>
+                        En sus tiempos libres hace trekking.
+                    </p>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 my-2 background aling-items-center border-0">
+                <div class="divImagen">
+                    <img src="/img/WhatsApp Image 2022-09-13 at 1.07.02 AM.jpeg" class="card-img-top avatar w-75"
+                        alt="Julian Lopez" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title lead fw-bold divAvatar">Julian Lopez</h5>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/vicopalacio"><i class="bi bi-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/vicopalacio/"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/viqui_palacio"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/vicky_palacios_fernandez"><i
+                                    class="bi bi-facebook"></i></i></a>
+                        </li>
+                    </ul>
+                    <p class="card-text lead fw-bold divAvatar">
+                        21 años. <br>
+                    Estudiante de Ingeniería en sistemas. <br>
+                    Trabaja en detailing de autos.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-3 text-black text-center">
+        <section class="container">
+            <article class="row">
+                <aside class="d-flex col-12 col-md-4 align-items-center justify-content-center">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_qDJZag.json" speed="1"
+                        class='lottie-footer-logo' loop autoplay></lottie-player>
+                </aside>
+                <aside class="d-flex flex-column col-12 col-md-4 justify-content-center fs-5">
+                    <a href="/pages/nosotros.html" class="text-decoration-none">Acerca de Nosotros</a>
+                    <a href="/pages/error.html" class="text-decoration-none">Términos y Condiciones</a>
+                    <a href="/pages/error.html" class="text-decoration-none">Contacto</a>
+                </aside>
+                <aside class="d-flex col-12 col-md-4 align-items-center justify-content-center">
+                    <div class="fs-5">
+                        <p>Redes Sociales</p>
+                        <aside class="d-flex">
+                            <a href="/pages/error.html">
+                                <script
+                                    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_f5ytlpiy.json"
+                                    background="transparent" speed="1" class="lottie-icono" loop autoplay>
+                                </lottie-player></i>
+                            </a>
+                            <a href="/pages/error.html">
+                                <script
+                                    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_up3nxxtl.json"
+                                    background="transparent" speed="1" class="lottie-icono" loop autoplay>
+                                </lottie-player></i>
+                            </a>
+                            <a href="/pages/error.html">
+                                <script
+                                    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                                <lottie-player src="https://assets3.lottiefiles.com/private_files/lf30_pb3we3yk.json"
+                                    background="transparent" speed="1" class="lottie-icono" loop autoplay>
+                                </lottie-player>
+                            </a>
+                        </aside>
+                    </div>
+                </aside>
+            </article>
+            <p>&copy; Todos los derechos reservados</p>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

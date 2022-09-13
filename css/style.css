@@ -131,3 +131,97 @@ footer, a:hover{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.tituloNosotros{
+    color: #FF587C;
+}
+
+.avatar {
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+      transition: 2s;
+  }
+  .card:hover img
+  {
+      transform: scale(1.1);
+  }
+  .card ul
+  {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: rgba(255,255,255,0);
+  }
+  
+  .card ul li
+  {
+      background: #ECF0FF;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 40px;
+      transform: perspective(800px) rotateY(90deg);
+      transition: .5s;
+      transform-origin: left;
+  }
+  
+  .card:hover ul li
+  {
+      transform: perspective(800px) rotateY(0deg);
+  }
+  
+  .card:hover ul li:nth-child(1)
+  {
+      transition-delay: .2s;
+  }
+  
+  .card:hover ul li:nth-child(2)
+  {
+      transition-delay: .6s;
+  }
+  
+  .card:hover ul li:nth-child(3)
+  {
+      transition-delay: .8s;
+  }
+  
+  .card:hover ul li:nth-child(4)
+  {
+      transition-delay: 1s;
+  }
+  
+  .card ul li a
+  {
+      color: #7556E3;
+      background: rgba(255,255,255,0);
+  }
+  
+  .card ul li i
+  {
+      color: #7556E3;
+      background: rgba(255,255,255,0);
+  }
+  
+  .card ul li i:hover
+  {
+      color: #fff;
+      background: rgba(255,255,255,0);
+  }
+
+  @media all and (max-width: 576px){
+    .divAvatar{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .divImagen{
+        display: flex;
+        justify-content: center;
+    }
+  }
