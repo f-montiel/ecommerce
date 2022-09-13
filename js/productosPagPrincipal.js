@@ -65,3 +65,25 @@ function buscar(e){
     }
 
 }
+
+function filtrarProductosPorMarcas(marca){ 
+  let productosFiltrados = []
+  listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+  listaProductos.forEach((producto)=>{
+    if(marca === producto.marca){
+      productosFiltrados.push(producto);
+      listaProductos = productosFiltrados;
+      borrarGrilla();
+      cargaDeProductos();
+    }
+  })
+  if(productosFiltrados.length <= 0){
+    grillaCelulares.innerHTML = `<h2 class="mb-4">¡Ups! Producto no encontrado</h2>`
+  }
+  if(marca == ""){
+    listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
+    borrarGrilla();
+    cargaDeProductos();
+  }
+    
+}
