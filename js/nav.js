@@ -25,8 +25,8 @@ let usuarios = [
   { email: "montiel.facu@gmail.com", password: "1234Facu", admin: false },
   { email: "jochydaoua@gmail.com", password: "123456Jo", admin: true },
   { email: "victoriapalaciof@gmail.com", password: "123Vicky", admin: true },
-  { email: "eliseo.espindola1@gmail.com", password: "12345678", admin: true },
-  { email: "julianlopez@gmail.com", password: "12345678", admin: false }
+  { email: "eliseo.espindola1@gmail.com", password: "12345Eli", admin: true },
+  { email: "julianlopez@gmail.com", password: "1234Juli", admin: false }
 ];
 
 formularioLogin.addEventListener("submit", ingresar);

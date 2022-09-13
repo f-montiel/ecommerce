@@ -52,12 +52,12 @@ function buscar(e){
       ){
         productosEncontrados.push(producto);
         listaProductos = productosEncontrados;
-        borrarGrilla()
+        borrarGrilla();
         cargaDeProductos();
       }
     })
     if(productosEncontrados.length <= 0){
-      grillaCelulares.innerHTML = `<h2>¡Ups! Busca bien cajeta</h2>`
+      grillaCelulares.innerHTML = `<h2 class="my-2">¡Ups! Producto no encontrado</h2>`
     }
     if(valorBuscado.length <= 0){
       listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
