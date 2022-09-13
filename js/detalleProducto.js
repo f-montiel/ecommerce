@@ -1,9 +1,7 @@
 const parametroUrl = new URLSearchParams(window.location.search);
-console.log(parametroUrl.get("producto"));
 
 let listaProductos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 let productoEncontrado = listaProductos.find((producto)=> producto.codigo === parametroUrl.get("producto"));
-console.log(productoEncontrado);
 
 let cardDetalle = document.getElementById("cardDetalle");
 
