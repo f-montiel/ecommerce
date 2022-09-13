@@ -3,7 +3,6 @@ let listaProductos =
 let grillaCelulares = document.getElementById("grillaCelulares");
 let formularioBuscador = document.getElementById("formularioBuscador");
 formularioBuscador.addEventListener("submit", buscar);
-let productosEncontrados = [];
 
 function cargaDeProductos() {
   if (listaProductos.length > 0) {

@@ -11,15 +11,17 @@ const formularioLogin = document.getElementById("formularioLogin");
 let usuarioLogueado = JSON.parse(localStorage.getItem("usuarioLogueado"));
 let productos = JSON.parse(localStorage.getItem("listaProductosKey")) || [];
 let marcas = [];
-productos.forEach(producto => {
-    marcas.push(producto.marca);
-});
-let marcasUnicas = [...new Set(marcas)];
-marcasUnicas.forEach(marca => {
-  document.getElementById("marcas").innerHTML += `
-  <li><a class="dropdown-item" href="#">${marca}</a></li>
-  `  
-});
+if(window.location.pathname =="/" || window.location.pathname =="/index.html" ){
+  productos.forEach(producto => {
+      marcas.push(producto.marca);
+  });
+  let marcasUnicas = [...new Set(marcas)];
+  marcasUnicas.forEach(marca => {
+    document.getElementById("marcas").innerHTML += `
+    <li><a class="dropdown-item" href="#">${marca}</a></li>
+    `  
+  });
+}
 
 let usuarios = [
   { email: "montiel.facu@gmail.com", password: "1234Facu", admin: false },
