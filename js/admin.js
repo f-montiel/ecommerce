@@ -166,7 +166,6 @@ window.editarProducto = (codigoBuscado)=> {
              (producto) => producto.codigo != codigo
            );
            listaProductos = productoAEliminar;
-           console.log(productoAEliminar);
        Swal.fire('Borrado con éxito!', '', 'success')
        guardarProductosenLocalStorage();
        crearTablaProductos();
