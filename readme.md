@@ -10,7 +10,7 @@ Este proyecto se trata de un ecommerce de celulares, creando un CRUD y utilizand
 
 ## GitHub
 
-[Git](https://github.com/f-montiel/ecommerce.git) :smiley_cat": 
+[Git](https://github.com/f-montiel/ecommerce.git) :smiley_cat: 
 
 ## Autores
 - Espindola, Eliseo. :alien:
